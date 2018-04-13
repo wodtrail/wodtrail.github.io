@@ -1,0 +1,268 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/WOD Test Template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>William O. Douglas Heritage Trail: Home</title>
+<!-- InstanceEndEditable -->
+<style type="text/css">
+<!--
+body {
+	margin: 0;
+	padding: 0;
+	color: #000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	line-height: 1.4;
+	background-color: #CADCA9;
+	background-image: url(background.jpg);
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #03C;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+/* ~~ These are the columns for the layout. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the divs. The elements within these divs have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a div set to float right). Many times, padding can be used instead. For divs where this rule must be broken, you should add a "display:inline" declaration to the div's rule to tame a bug where some versions of Internet Explorer double the margin.
+
+3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar divs could be stacked if necessary. These can very easily be changed to IDs if that's your preference, as long as you'll only be using them once per document.
+
+4) If you prefer your nav on the right instead of the left, simply float these columns the opposite direction (all right instead of all left) and they'll render in reverse order. There's no need to move the divs around in the HTML source.
+
+*/
+.sidebar1 {
+	float: left;
+	width: 170px;
+	color: #000;
+	background-color: #C0C7B7;
+	padding: 10px;
+	height: 500px;
+	position: relative;
+	padding-left: 10px;
+}
+
+/* ~~this fixed width container surrounds the other divs~~ */
+.container {
+	width: 960px;
+	background: #C0C7B7;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+.header {
+	background: #ADB96E;
+	width: 960px;
+}
+.content {
+	padding: 10px 0;
+	width: 770px;
+	float: left;
+	background-color: #FFF;
+}
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	width: 160px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	background: #C6D580;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background: #ADB96E;
+	color: #FFF;
+}
+
+/* ~~ The footer ~~ */
+.footer {
+	padding: 10px 0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	background-color: #567D48;
+	color: #FFF;
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.Highlight {	font-family: "Comic Sans MS", cursive;
+	font-style: italic;
+	color: #333333;
+	font-size: 16px;
+	font-weight: normal;
+}
+.container .sidebar1 p a strong {
+	color: #000;
+	font-size: 120%;
+}
+-->
+</style>
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+
+<body>
+<div class="container">
+  <div class="header"><a href="index.html"><img src="WODCoverFlow.jpg" alt="William O. Douglas Trail: Yakima to Mount Ranier" name="Insert_logo" width="960" height="275" border="5" id="Insert_logo" style="background: #C6D580; display:block; font-size: 10%;" /></a><!-- end .header --></div>
+  <ul id="MenuBar1" class="MenuBarHorizontal">
+    <li><a href="trail.html" title="Trail Info">Trail Info</a></li>
+    <li><a href="map.html" title="Map">Map</a></li>
+    <li>
+      <div align="center"><a href="naturalhistory.html" title="Natural History">Natural History</a></div>
+    </li>
+    <li>
+      <div align="center"><a href="#" class="MenuBarItemSubmenu">Heritage Hikes</a>
+        <ul>
+          <li><a href="selahgap.html" title="Selah Gap">Selah Gap</a></li>
+          <li><a href="wagonroad.html">Cowiche Valley Wagon Road</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="#" class="MenuBarItemSubmenu">Ecosystem Hikes</a>
+      <ul>
+<li><a href="divideridge.html" title="Divide Ridge">Divide Ridge</a></li>
+<li><a href="laughingwater.html" title="Laughingwater Trail">Laughingwater Creek</a></li>
+<li><a href="#" title="Fish Lake to Cascade Crest">Fish Lake to Cascade Crest</a></li>
+</ul>
+    </li>
+<li>
+      <div align="center"><a href="about.html" title="About WIlliam O. Douglas">About W.O.D.</a></div>
+    </li>
+  </ul>
+<div class="sidebar1">
+  <center><form action="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E6DGHGBZFE9BY" method="post" target="_blank">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="2" height="1">
+</form></center>
+<p><font size="-1"><br>Mail Checks to:</br><br>4001 Summitview Ave, Suite 5-45 Yakima, WA 98908</br></font></p>
+  <p align="center"><strong>Featured Hikes</strong></p>
+<p align="center"><a href="rockytop.html">Rocky Top </a></p>
+    <p align="center"><strong>Featured Links</strong></p>
+    <p align="center"><a href="WTA_Article.pdf">WTA Article</a></p>
+    <p align="center"><a href="trailproposal.html">National Historic Trail Proposal</a></p>
+    <p align="center"><a href="rainier1881.PDF">Climbing Mt. Rainier in 1881</a></p>
+<p align="center"><strong>Contact Us</strong></p>
+    <p align="center"><a href="mailto:williamodouglastrail@gmail.com">Send us an Email</a></p>
+    <p align="center"><a href="https://www.facebook.com/pages/William-O-Douglas-Trail/392434207446818" target="_blank"><img src="Icons/findus-fb.jpeg" width="119" height="48" alt="William O. Douglas Trail: Find Us" /></a></p>
+    <p align="center">&nbsp;</p>
+  </div>
+  
+  <div class="content"><!-- InstanceBeginEditable name="content" -->
+    <p align="center"><strong>Divide Ridge</strong></p>
+    <p>Length: 3.6 miles</p>
+    <p>Beginning Elevation: 5,050 feet elevation.<br />
+    </p>
+    <p>End Elevation: 5,670 feet elevation.<br />
+    </p>
+    <p>Elevation Gain: 760 feet.</p>
+    <p><img src="Andy Photos/divideridge.jpg" alt="divideridge" width="550" height="300" hspace="70" /><br />
+    </p>
+    <p>Trailhead:  A fine day hike approach is from just west of Windy Point Day Use Area on US-12 (milepost   177). Take FR-1302 up, keeping right at 6.4 miles (at an informal campground), then left beyond this opening at 6.5 miles. Park at 9 miles in a pullout just west of a set of communication towers. Walk west and uphill along Divide Ridge along FR-1302, passing Hatton Road (FR-607) in 0.3 miles. [Long distance t­hrough-hikers will approach Divide Ridge from the upper terminus of the Hatton Road Hike (FR-7607)].<br />
+    </p>
+    <p>This trail segment  offers a fantastic overview of the WO Douglas Trail setting in the southern Washington Cascades. The trail showcases much of the region&rsquo;s dramatic and varied topography and geology. These landform features combine with an equally exciting array of ecological units as one ascends the trail, from upper shrub-steppe to dry conifer forest to subalpine, to encompass an impressive portion of the Ecosystems  present along the entire WOD Trail. The diverse array of abiotic and biotic attributes makes the Divide Ridge segment a premier outdoor laboratory.  <br />
+    </p>
+    <p>At Hatton Road, the Dry forest Interior Douglas-fir Ecosystem mantles the shady slopes, with prongs of wildflower-splotched shrub-steppe on the lithosols. A variety of colorful buckwheats enliven the lithosols and a good number of Columbian Biscuitroot cling to the rocky slopes, distinctive in early spring on account of their pinkish bloom and blue-green foliage, then again in summer when this foliage yellows. A few Bitterroot dapple the lithosols, too.  Ascending to the head of a ravine and rounding a bend in the trail, the landscape quickly transitions into a denser forest of Douglas-fir, with many fine specimens of lime-green Western Larch. Dense currant thickets form the understory.<br />
+    </p>
+    <p>With each bend in the trail, depending on slope and aspect and climb in elevation, a new habitat type is encountered. Indeed, a bewildering array of vegetation types, from Great Basin shrub-steppe vegetation on exposed south and west slopes through several dry forest communities on the lower north slopes. Higher, the Subalpine Fir Ecosystem dominates north slopes, with scattered Mountain Hemlocks and Whitebark Pines, suggesting a very snowy regime. Finally, a fine grove of Engelmann spruce just shy of Jumpoff Lookout gives a &ldquo;Rocky Mountain&rdquo; flavor to the landscape, a vegetation type not known closer to the Cascade crest on the WOD Trail. The complex interplay of these dramatically different ecosystems provides niches for amazing biodiversity. </p>
+    <p><img src="Andy Photos/jumpoff.jpg" alt="Jumpoff Lookout" width="450" height="300" hspace="120" /><br />
+    </p>
+    <p>Jumpoff Lookout affords a commanding view of the region, indeed one of the finest anywhere in south-central Washington. To the east lies Yakima, nestled in the valley bottom in the Yakima Fold Belt. To the northeast beyond Yakima is Yakima Ridge and just left of that, Umtanum Ridge, both high ridges in the Yakima Fold Belt and within the Yakima Training Center, a military installation.  Nearer at hand are the orchard communities of Cowiche and Tieton. To the north, Mt. Stuart, a huge granite outlier of the Cascades, pokes above Clemans Mountain, largest in the Yakima Fold Belt. The west side of Clemans Mountain reveals a large area of rumpled slopes. This is Sanford Pasture, site of huge landslides, including a very recent slope failure near The Nile, which forced rerouting of SR-410, the primary east-west highway in the valley.  Just to the north of Jumpoff Lookout, down next to the Tieton River, is US Highway 12 which lies along the north shore of Rimrock Lake.</p>
+    <p><img src="Andy Photos/basalt.jpg" alt="basalt" width="450" height="300" hspace="120" /></p>
+    <p><strong><u>Geology</u></strong><br />
+    </p>
+    <blockquote>
+      <p align="left"><em>Dramatic basalt cliffs framing the Tieton River Canyon, westerly outliers of the Columbia Plateau basalts dominate the bedrock to the east. Geologists have mapped 12 units of the Grande Ronde Basalt in this canyon. Many outcrops of volcanic material from the Tieton volcano interfinger the plateau basalts. Scanning westward, the east side of Bethel Ridge looms; note communication towers atop the ridge, here at the western edge of the Columbia Plateau basalts. The multi-colored west side of Bethel Ridge is composed of thick outcrops of volcanic material erupted from the Mt. Aix caldera to the north.  To the northwest, Shellrock Peak pokes above Bethel Ridge&rsquo;s multi-hued volcanics. On the western horizon lies Mt. Rainier, Washington&rsquo;s highest peak and monarch of the Cascade Mountains, with Rimrock Lake shimmering below. This reservoir was created for irrigation of Yakima Valley cropland. Surrounding this water body, are outcrops of the &ldquo;Rimrock outlier,&rdquo; the only significant chunk of &ldquo;old rock&rdquo; in the south Washington Cascades. These enigmatic metamorphic rocks, consisting of several named formations, had their origin perhaps faraway and were &ldquo;docked&rdquo; or accreted to growing North America in the distant past. East of Rimrock Lake are two imposing basalt oucrops, Goose Egg Mountain and Kloochman Rock, disjunct chunks of the Columbia Plateau. Kloochman Rock figures prominently in W. O. Douglas&rsquo; writings, and he hiked and climbed there a number of times. To the southwest the snowy Goat Rocks, a thoroughly eroded mega-volcano, beckon. One of the world&rsquo;s longest andesite flows, emanates from this old volcano and snakes its way down the Tieton River just out of view below you, ending at Painted Rocks on the outskirts of Yakima. Off to the south Mt. Adams, another mega-volcano and Washington&rsquo;s second highest peak. </em></p>
+    </blockquote>
+    <p>The rocks at the lookout proper, with their buckwheats and penstemons, are alive on warm summer days with many butterflies. For some species of butterflies, mountaintops are favored sites to find mates.<br />
+  </p>
+    <p>To continue west on the WOD Trail, see the Jumpoff Meadows Hike or return the way you came.</p>
+    <div>
+      <div> </div>
+    </div>
+<p align="center" class="Highlight">&nbsp;</p>
+    <p align="center" class="Highlight"><img src="Divide Ridge Trail.jpg" alt="Douglas" width="652" height="490" border="5" /></p>
+    <p>DIVIDE RIDGE TRAIL WAYPOINTS <br />
+      1 -  46⁰38.841&rsquo; 120⁰58.331&rsquo; 4997&rsquo;                               Trailhead <br />
+      2 -  46⁰38.668&rsquo; 120⁰58.715&rsquo; 5038&rsquo;                              Hatton Road Junction<br />
+      3 -  46⁰38.560&rsquo; 120⁰59.665&rsquo; 5320&rsquo;                              Interior Douglas Fir Forest<br />
+      4 -  46⁰38.406&rsquo; 121⁰00.717&rsquo; 5653&rsquo;                              Old Burn In Subalpine Fir Forest<br />
+      5 -  46⁰38.474&rsquo; 121⁰01.154&rsquo; 5568&rsquo;                              Mountain Hemlock On North Slope<br />
+      6 -  46⁰38.295&rsquo; 121⁰00.880&rsquo; 5632&rsquo;                              &quot;Lupine&quot; Bald<br />
+      7 -  46⁰38.345&rsquo; 121⁰01.562&rsquo; 5662&rsquo;                              Subalpine Fir-mature<br />
+      8 -  46⁰38.534&rsquo; 121,01.762&rsquo;  5644&rsquo;                             Engelmann Spruce-grove<br />
+      9 -  46⁰38.487&rsquo; 121,01.887&rsquo;  5644&rsquo;                             FR-1302-West End<br />
+      10 -  46⁰38.664&lsquo; 121⁰01.906&rsquo; 5643&rsquo;                            Jumpoff Lookout</p>
+<h1>&nbsp;</h1>
+  <!-- InstanceEndEditable --></div>
+<div class="footer">
+    <p>Copyright © 2006-2013 William O. Douglas Trail Foundation. All Rights Reserved.</p>
+  <!-- end .footer --></div>
+  <!-- end .container --></div>
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46661399-1', 'williamodouglastrail.org');
+  ga('send', 'pageview');
+
+</script>
+</body>
+<!-- InstanceEnd --></html>

@@ -1,0 +1,273 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="Templates/WOD Test Template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>William O. Douglas Heritage Trail: Natural History</title>
+<!-- InstanceEndEditable -->
+<style type="text/css">
+<!--
+body {
+	margin: 0;
+	padding: 0;
+	color: #000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	line-height: 1.4;
+	background-color: #CADCA9;
+	background-image: url(background.jpg);
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #03C;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+/* ~~ These are the columns for the layout. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the divs. The elements within these divs have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a div set to float right). Many times, padding can be used instead. For divs where this rule must be broken, you should add a "display:inline" declaration to the div's rule to tame a bug where some versions of Internet Explorer double the margin.
+
+3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar divs could be stacked if necessary. These can very easily be changed to IDs if that's your preference, as long as you'll only be using them once per document.
+
+4) If you prefer your nav on the right instead of the left, simply float these columns the opposite direction (all right instead of all left) and they'll render in reverse order. There's no need to move the divs around in the HTML source.
+
+*/
+.sidebar1 {
+	float: left;
+	width: 170px;
+	color: #000;
+	background-color: #C0C7B7;
+	padding: 10px;
+	height: 500px;
+	position: relative;
+	padding-left: 10px;
+}
+
+/* ~~this fixed width container surrounds the other divs~~ */
+.container {
+	width: 960px;
+	background: #C0C7B7;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+.header {
+	background: #ADB96E;
+	width: 960px;
+}
+.content {
+	padding: 10px 0;
+	width: 770px;
+	float: left;
+	background-color: #FFF;
+}
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	width: 160px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	background: #C6D580;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background: #ADB96E;
+	color: #FFF;
+}
+
+/* ~~ The footer ~~ */
+.footer {
+	padding: 10px 0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	background-color: #567D48;
+	color: #FFF;
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.Highlight {	font-family: "Comic Sans MS", cursive;
+	font-style: italic;
+	color: #333333;
+	font-size: 16px;
+	font-weight: normal;
+}
+.container .sidebar1 p a strong {
+	color: #000;
+	font-size: 120%;
+}
+-->
+</style>
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+
+<body>
+<div class="container">
+  <div class="header"><a href="index.html"><img src="WODCoverFlow.jpg" alt="William O. Douglas Trail: Yakima to Mount Ranier" name="Insert_logo" width="960" height="275" border="5" id="Insert_logo" style="background: #C6D580; display:block; font-size: 10%;" /></a><!-- end .header --></div>
+  <ul id="MenuBar1" class="MenuBarHorizontal">
+    <li><a href="trail.html" title="Trail Info">Trail Info</a></li>
+    <li><a href="map.html" title="Map">Map</a></li>
+    <li>
+      <div align="center"><a href="naturalhistory.html" title="Natural History">Natural History</a></div>
+    </li>
+    <li>
+      <div align="center"><a href="#" class="MenuBarItemSubmenu">Heritage Hikes</a>
+        <ul>
+          <li><a href="selahgap.html" title="Selah Gap">Selah Gap</a></li>
+          <li><a href="wagonroad.html">Cowiche Valley Wagon Road</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="#" class="MenuBarItemSubmenu">Ecosystem Hikes</a>
+      <ul>
+<li><a href="divideridge.html" title="Divide Ridge">Divide Ridge</a></li>
+<li><a href="laughingwater.html" title="Laughingwater Trail">Laughingwater Creek</a></li>
+<li><a href="#" title="Fish Lake to Cascade Crest">Fish Lake to Cascade Crest</a></li>
+</ul>
+    </li>
+<li>
+      <div align="center"><a href="about.html" title="About WIlliam O. Douglas">About W.O.D.</a></div>
+    </li>
+  </ul>
+<div class="sidebar1">
+  <center><form action="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E6DGHGBZFE9BY" method="post" target="_blank">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="2" height="1">
+</form></center>
+<p><font size="-1"><br>Mail Checks to:</br><br>4001 Summitview Ave, Suite 5-45 Yakima, WA 98908</br></font></p>
+  <p align="center"><strong>Featured Hikes</strong></p>
+<p align="center"><a href="rockytop.html">Rocky Top </a></p>
+    <p align="center"><strong>Featured Links</strong></p>
+    <p align="center"><a href="WTA_Article.pdf">WTA Article</a></p>
+    <p align="center"><a href="trailproposal.html">National Historic Trail Proposal</a></p>
+    <p align="center"><a href="rainier1881.PDF">Climbing Mt. Rainier in 1881</a></p>
+<p align="center"><strong>Contact Us</strong></p>
+    <p align="center"><a href="mailto:williamodouglastrail@gmail.com">Send us an Email</a></p>
+    <p align="center"><a href="https://www.facebook.com/pages/William-O-Douglas-Trail/392434207446818" target="_blank"><img src="Icons/findus-fb.jpeg" width="119" height="48" alt="William O. Douglas Trail: Find Us" /></a></p>
+    <p align="center">&nbsp;</p>
+  </div>
+  
+  <div class="content"><!-- InstanceBeginEditable name="content" -->
+    <h4 align="center">Natural History Features Along the William O. Douglas Heritage Trail: Yakima to Mount Rainier</h4>
+    <p>The William O. Douglas Trail is an 80-mile recreational pathway, honoring the conservation, historic, and cultural legacy of the late William O. Douglas, U.S. Supreme Court Justice. It begins in Yakima, Washington and climbs the east slopes of the Cascade Mountains to their crest, and then descends down the west slopes ending in Mt. Rainier National Park. </p>
+    <p>The William O. Douglas Trail region&rsquo;s fascinating cultural history and its recreational attributes were chronicled in many of the books written by Justice Douglas. He also celebrated the extraordinary natural wonders of the region. The William O. Douglas Trail follows a route showcasing these natural attributes. Moreover, as the trail is set in the heart of the rugged Cascade Mountains, world renowned for these scenic wonders, much of the heart of which is now protected, through actions of visionaries such as Justice Douglas, in national park or wilderness status.  </p>
+    <p>The William O. Douglas Trail, over much of its distance, is strongly affected by the Cascade Mountains rain-shadow. The west slopes of these mountains are drenched with copious precipitation from Pacific storms. Much of the moisture from these storms is wrung from the clouds on the western slopes. Precipitation declines dramatically on the east slopes. While about 100 inches per year falls on the crest in this region, only 20 miles east, less than 25 inches is recorded. A further 20 miles east, Yakima receives only 8 inches of precipitation per year – mostly during the winter season.</p>
+    <p><img src="Andy Photos/rainshadowmap.jpg" width="450" height="450" hspace="120" border="2" longdesc="http://cascaderainshadow" /></p>
+    <p>The William O. Douglas Trail follows a transect along a route from warm and dry at the base of the Cascades in Yakima upwards through progressively colder and wetter slopes of the Cascades, passing through three recognized ecoregions. An Ecoregion encompasses broad, connected landscapes containing a distinctive distribution of plant and animal species, with similar ecological patterns and relationships between species and their physical environment. The trail begins near the west margin of the semi-arid <u>Columbia Plateau Ecoregion</u>, and proceeds west and up in elevation into <u>East Cascades Ecoregion</u>. From the crest of this mountain chain, the trail descends the west slopes into the <u>West Cascades Ecoregion</u>. </p>
+    <p><img src="Andy Photos/CascadeRainshadow.jpg" width="450" height="300" hspace="120" longdesc="http://cascaderainshadow" /></p>
+    <p>Within the three ecoregions, pronounced moisture and temperature gradients are encountered along this east-to-west transect. These variations have resulted in a complex mosaic of distinct ecosystems. An Ecosystem is a biological community of interacting species, plus all of the abiotic factors influencing that community, sharing similar ecological processes, substrates, and/or environmental gradients. Within this broad framework, at a finer scale, plant ecologists identify a multitude of communities.  In all, 13 distinct Ecosystems are encountered along the William O. Douglas Trail, from desert-like shrub-steppe near Yakima to the super-wet temperate rain forest at Ohanapecosh in Mt. Rainier National Park. Between, the William O. Douglas Trail landscape is mantled in an impressive diversity of forested ecosystems, from dry forest to wet forest types and non-forested ecosystems, from wetlands to shrublands to alpine parklands These ecosystems showcase the region&rsquo;s extraordinary biodiversity, virtually unsurpassed anywhere in North America over such a limited distance.</p>
+    <p>What follows is an outline of the natural features found along the William O. Douglas Trail from its beginnings in Yakima to its end in Mt. Rainier National Park. Ecosystems are <strong>bolded </strong>below. </p>
+    <p><strong><em>Riparian.</em></strong> The trail begins in an urban setting in downtown Yakima, a thoroughly altered landscape in the <u>Columbia Plateau Ecoregion</u>. Soon the trail joins the Yakima Area Greenway along the Naches River and encounters some native cottonwoods and willows and man-made lakes, old gravel borrows. Ospreys nest here and various waterfowl frequent these ponds in spring and fall. </p>
+    <p><img src="Andy Photos/ripariancorridor.jpg" width="450" height="300" hspace="120" longdesc="http://ripariancorridor" /></p>
+    <p>The trail abruptly leaves the urban landscape and traverses increasingly wild and pristine conditions along Cowiche Creek. Here the trail enters Cowiche Canyon Conservancy. For its location on the edge of a major urban area, the the riparian ecosystem along this section of Cowiche Canyon is remarkably pristine. Diversity of flora and fauna, and aquatic species along this trail has been much-studied and catalogued, serving as an important recreational and educational resource for residents of the region. Over-arching streamside shrubs such as red-osier dogwood provide critical habitat for the Lucia Azure, a rare butterfly. Shaded streamside vegetation provides critical cover for spawning coho salmon in the rushing creek. Federally threatened anadromous Steelhead use Cowiche Creek. Colorful migrant birds inhabiting the riparian zone include yellow-breasted chat, Bullock&rsquo;s oriole, and lazuli bunting in addition to the more modestly attired residents such as black-capped chickadee. </p>
+    <p><strong><em>Shrub-steppe.</em></strong> Uplands in Cowiche Canyon are grown to a mosaic of shrub-steppe plant communities, the classic Great Basin ecosystem, Deeper soils are dominated by big sagebrush and tall bunchgrass. Shallower soils (lithosols) have dwarfish shrubs such as rigid sagebrush and various buckwheats. These are enlivened with a colorful wildflower display, comprised of many species, in spring. The diversity of biscuitroots is noteworthy, with at least seven species present. This group of plants were important in the region&rsquo;s cultural history as a carbohydrate-rich food for the Yakama Tribes. </p>
+    <p><img src="Andy Photos/buckwheat.jpg" width="450" height="300" hspace="120" longdesc="http://buckwheat" /></p>
+    <p>Flanking the shrub-steppe are basalt and andesite cliffs, a common feature on the Columbia Plateau. These lichen and moss encrusted cliffs provide nesting habitat for various raptors, and both canyon and rock wrens. Pacific rattlesnakes, docile unless threatened, are often encountered by hikers, especially on warm spring days. Piercing whistles from yellow-bellied marmots sunning on outcrops are often heard by hikers, too.</p>
+    <p>West, the trail climbs out of Cowiche Canyon and crosses Summitview Road, briefly skirting the ever-expanding Yakima urban area and ascends Cowiche Mountain. A steady climb to the east summit of Cowiche Mountain traverses big sagebrush and bluebunch wheatgrass, core habitat for Washington state threatened Loggerhead Shrike and Sage Thrasher, both bird species dependent on high quality shrub-steppe.  These areas of deeper soils alternate with lithosols where the rare plant, T<em>auschia hooveri</em>, and an abundance of biscuitroots, occur on gravelly, thin soils. The  Columbian Lomatium, very near its northern limit, produces an exquisite pink bloom in spring on talus slopes. Many other species of wildflowers enliven the shrub-steppe in spring, creating a floral display attracting many admirers.</p>
+    <p><img src="Andy Photos/Sagethrasher.jpg" width="450" height="300" hspace="120" longdesc="http://sagethrasher" /><br />
+       <br />
+      Three miles west of Summitview Road, the trail enters Snow Mountain Ranch, a preserve of the Cowiche Canyon Conservancy (summit elev. 2,968&rsquo;). On the mountain&rsquo;s north side, in areas with delayed snowmelt another shrub-steppe association, the three-tip sagebrush and Idaho fescue, occurs. This habitat is home to Townsend&rsquo;s ground squirrel, a rare and declining species. </p>
+    <p><strong><em>Garry Oak.</em></strong> Descending to Cowiche Creek (South Fork), a significant grove of Garry Oaks is encountered, alternating with <em>Riparian Zone </em>elements<em>.</em> The oak groves here are some of the northernmost on the Cascade Mountain east slopes and are home to Lewis&rsquo;s woodpeckers and western scrub-jays, both strongly associated with oaks. The western gray squirrel, a Washington state threatened species, and closely associated with oaks, finds habitat here.</p>
+    <p>North from Cowiche Creek, south-facing slopes are mantled in a shrub-steppe community dominated by scattered bitterbrush. This habitat provides prime winter forage for the large mule deer population that migrates seasonally up and down the east slopes of the Cascade Mountains. Turkey vultures and golden eagles frequent this zone, too combing the slopes for carcasses of both mule deer and elk.</p>
+    <p>Traveling west, along and up East Divide Ridge, various draws on the undulating terrain are grown to a remarkable mosaic of vegetation tied to two ecoregions: the upper <u>Columbia Plateau</u> (shrub-steppe) and lower <u>East Cascades </u>(various dry forest ecosystems).</p>
+    <p><strong><em>Ponderosa Pine</em></strong>. Ponderosa pine forest is the first &ldquo;dry forest&rdquo; ecosystem encountered on the WOD Trail. Over many areas in western North America, dry forests dominated by ponderosa pine form the &ldquo;lower timberline,&rdquo; as one increases in elevation and moisture from treeless ecosystems at lower elevations. In Washington, the ponderosa pine zone typically begins on sites with at least 14 inches of precipitation. Characteristic bird species include white-headed woodpecker, pygmy nuthatch, western bluebird, and Cassin&rsquo;s finch. Mammals include the rare western gray squirrel.</p>
+    <p><img src="Andy Photos/Pinesbegin.jpg" width="450" height="300" hspace="120" longdesc="http://ponderosapines" /></p>
+    <p>The mosaic of vegetation zones along the William O. Douglas Trail on East Divide Ridge makes this area a &ldquo;hotspot&rdquo; of biodiversity. Several credible studies, including the Washington GAP Analysis and another by the University of Montana, conclude and emphasize that the lower east slopes region of the Cascades, because of their mosaic of vegetation zones found in proximity, harbor a very high number of species of flora and fauna.  Plant lovers, butterfly fanciers, and birders certainly recognize this region as hosting an impressive list of their favorite group of species.</p>
+    <p><strong><em>Interior Douglas-fir</em></strong><em>. </em>Upward on Divide Ridge, precipitation increases to a level favorable for growth of Douglas-fir. The variety of this fir on the Cascade Mountain east slopes is sufficiently different from the much larger Coastal Douglas-firs of the Cascade Mountain west slopes that it is named &ldquo;Interior Douglas-fir.&rdquo; Shrubs such as snowberry and ocean spray become common. Birds include sooty grouse, pileated woodpecker, Cassin&rsquo;s vireo, and dark-eyed Junco.  </p>
+    <p><strong><em>Grand Fir.</em></strong> Still upward in elevation and westerly on Divide Ridge, precipitation and especially snowfall increases markedly from the <strong><em>Ponderosa Pine Zone</em>.</strong>  Grand fir becomes dominant, with western larch and a mixture of other conifers. Some call this the &ldquo;mixed-conifer&rdquo; zone on account of its high diversity of conifers (firs, pines, larches, hemlocks, and spruces). This is the &ldquo;Kingdom of the Woodpeckers.&rdquo; No less than 10 of 13 Washington woodpecker species can be found in this zone, making the WOD Trail among the very best sites in the United States for diversity of this group. This is also core habitat for the endangered Northern Spotted Owl. Northern flying squirrel is a characteristic mammal.</p>
+    <p><img src="Andy Photos/spottedowl.jpg" width="450" height="300" hspace="120" longdesc="http://spottedowl" /></p>
+    <p><strong><em>Subalpine Fir</em></strong>. Uppermost elevations near Jumpoff Lookout (elev. 5,670&rsquo;) are characterized by cold and snowy winters, favoring subalpine fir and whitebark pine, both typical tree species of boreal (northern) habitats. Squawking Clark&rsquo;s nutcrackers and the ethereal song of the hermit thrush are characteristic here.<br />
+       <br />
+  <strong><em>Pond, marsh, and streamside communities.</em></strong> Down into the Tieton Basin, the WOD Trail trends west through dry forests of both the <em>Grand Fir</em> and <em>Ponderosa Pine Zones</em> and winds around various high elevation wetlands, some the result of numerous landslides sloughing off Divide Ridge to the south during the recent geologic past.  These are species-rich wetlands, lending impressive biodiversity in the dry forest landscape. Adjacent to some of these wetland sites are extensive alder thickets, alive with Neotropical warblers, vireos, tanagers, and flycatchers in the warmer months. In October, Clear Creek is packed with tens of thousands of kokanee salmon, a small species of land-locked salmon. Bald eagles, American dippers, and common mergansers congregate to feast on fish eggs and carcasses of these fish. Nearby, Clear Lake provides important waterfowl habitat for nesting Barrow&rsquo;s Goldeneyes and Ring-necked Ducks. In both spring and fall migration it provides an important resting and refueling stop for many other waterfowl and other types of waterbirds. Trumpeter Swans winter in small numbers in areas of the lake that remain open. </p>
+    <p><img src="Andy Photos/wetlands.jpg" width="450" height="300" hspace="120" longdesc="http://wetlands" /></p>
+    <p><strong><em>Interior Western Hemlock Zone.</em></strong>On shaded slopes beginning near the west end of Rimrock and Clear Lakes, a transition from dry to wet forests is occurs. Stands of western hemlock occur, a dominant tree west of the Cascades. Among the hemlock trees, especially along stream courses, the presence of western red-cedar is a further hint one is approaching the Cascade crest and a westside flora. Tree, shrub, and forb components in this forest are somewhat different than those on the west slopes of the Cascades, hence &ldquo;interior,&rdquo; akin to the same forest several hundred miles to the east in the Selkirk Mountains and north into Canada, the &ldquo;Interior West Belt.&rdquo; Chestnut-backed chickadee, golden-crowned kinglet, and varied thrush are common birds. </p>
+    <p>Crossing US-12 along Indian Creek, and then climbing northwest on Sand Ridge, the trail enters the William O. Douglas Wilderness Area, an expansive 168,000-acre wildland commemorating the trail&rsquo;s namesake. The <strong><em>Subalpine Fir </em></strong>ecosystem<strong> </strong>is again<strong> </strong>entered, and the trail is in this ecosystem to near the Cascade Mountain crest. This forest is very snowy and cold, with a short and cool summer. It is a boreal (northern) zone with open forests dominated by the spire-shaped subalpine fir. Interspersed with the tree clumps are scenic mountain lakes and ponds. With increasing elevation, the forest becomes less continuous and more stunted, and a low shrub (huckleberries and mountain ash especially) layer becomes conspicuous. This is a landscape with seven or more months of winter snow cover, a very rigorous climate, indeed. Gray jays, or &ldquo;whiskeyjacks,&rdquo; are characteristic birds of these high elevation forests, excessively snowy in the winter and excessively buggy in summer. Mountain chickadee, hermit thrush, and gray jay are other characteristic birds, while typical mammals include pine marten, red squirrel, and boreal redback vole.</p>
+    <p><img src="Andy Photos/whiskeyjack.jpg" width="450" height="300" hspace="120" longdesc="http://whiskeyjack" /></p>
+    <p><strong><em>Mountain Hemlock</em></strong>.  At the Cascade Mountain crest, the trail, as it begins to descend, enters the third ecoregion: the <u>West Cascades</u>. At this point, winter reigns for at least eight months with a stupendous snowpack, indeed the highest recorded anywhere on earth. The total winter snowpack typically exceeds 600 inches per year and nearby sites in this ecosystem, (Paradise and Mt. Baker), have recorded a world record 1200 inches in one year, just over 100 feet! In this ecosystem of deep and persistent snowpack, subalpine fir is replaced by mountain hemlock. This &ldquo;snow forest&rdquo; is found along the west slopes of the Western Cordillera from southeast Alaska to about Crater Lake in Oregon. Mountain hemlock is the dominant tree, a species wedded to wet, cold feet throughout the year. Typical bird species include gray jay and dark-eyed junco. </p>
+    <p><strong><em>Alpine Parkland.</em></strong>As snow depth and duration increase, the growing season shortens and forest cover diminishes. Trees become ever more dwarfed, creating a parkland of picturesque tree clumps alternating with meadow or heather openings. The driest aspects of these openings are covered with a dwarf shrub cover (huckleberries, heathers or mountain ash). Wetter areas are mantled in lush herbaceous meadows. In July and August, after the deep winter snows finally melt, these meadows burst into a wildflower show of international fame, attracting visitors from afar to hike, photograph, and simply view this wildflower extravaganza set amidst rugged, picture perfect peaks of the high Cascades.  Characteristic birds include the Clark&rsquo;s nutcracker. The most conspicuous mammal is the hoary marmot, whose piercing whistles warn of a predator such as an eagle passing over. Elk and mule deer graze and browse this landscape from summer to first snowfall.  <strong> </strong></p>
+    <p><img src="Andy Photos/alpineparkland.jpg" width="450" height="300" hspace="120" longdesc="http://alpineparkland" /></p>
+    <p><strong><em>Silver Fir.</em></strong> Descending west towards Ohanapecosh, along Laughingwater Creek, as snowpack decreases, mountain hemlock thins and is replaced by a magnificent silver fir forest (well-named <em>Abies amabilis</em>, Latin, one meaning is lovely). Birds and mammal life are not diverse in this forest. Chestnut-backed Chickadee, Golden-crowned Kinglet, Pileated Woodpecker, and Varied Thrush are characteristic birds while Douglas squirrel is a common mammal.</p>
+    <p><strong><em>Western Hemlock.</em></strong> Down in elevation, silver fir gradually thins out, replaced by western hemlock. Douglas-fir is the pioneer tree species in this quintessential &ldquo;wetside&rdquo; forest zone, gradually replaced by hemlocks over time, a shade tolerant species. As with the Silver Fir Zone, bird and mammal life is neither diverse nor abundant.  Chestnut-backed Chickadee, Pacific Wren, Golden-crowned Kinglet, and Pileated Woodpecker are characteristic birds while Douglas squirrel is a common mammal.</p>
+    <p><img src="Andy Photos/pacificwren.jpg" width="450" height="300" hspace="120" longdesc="http://pacificwren" /></p>
+    <p>Near the trail&rsquo;s terminus, at Ohanapecosh is an old growth temperate conifer forest of towering Douglas-fir, western hemlock, and western red-cedar. &ldquo;Grove of the Patriarchs.&rdquo; is indeed fitting. Few who walk through this trail are not moved spiritually. This colossal forest is indeed a fitting end for the William O. Douglas Trail, named in honor of an individual who celebrated wilderness and worked tirelessly to preserve natural wonders such as this across the United States.</p>
+    <p>&nbsp;</p>
+    <p>Nomenclature for forested and shrub-steppe ecosystems follows: </p>
+    <p>Cassidy, K.M. 1997. Land Cover of Washington State: Description and management. Vol. 1 in Washington State Gap Analysis Project Final Report. WA Cooperative Fish and Wildlife Research Unit, University of Washington.</p>
+    <p>For the wetland ecosystem: Johnson, D.H., and T.A. O&rsquo;Neil. 2001. Wildlife-Habitat Relationships in Oregon and Washington. Oregon State University. </p>
+    <p><em>Andy Stepniewski</em><br />
+      March 2012</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+  <!-- InstanceEndEditable --></div>
+<div class="footer">
+    <p>Copyright © 2006-2013 William O. Douglas Trail Foundation. All Rights Reserved.</p>
+  <!-- end .footer --></div>
+  <!-- end .container --></div>
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46661399-1', 'williamodouglastrail.org');
+  ga('send', 'pageview');
+
+</script>
+</body>
+<!-- InstanceEnd --></html>

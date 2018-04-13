@@ -1,0 +1,300 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><!-- InstanceBegin template="/Templates/WOD Test Template.dwt" codeOutsideHTMLIsLocked="false" -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<!-- InstanceBeginEditable name="doctitle" -->
+<title>William O. Douglas Trail: Selah Gap Hillclimb</title>
+<!-- InstanceEndEditable -->
+<style type="text/css">
+<!--
+body {
+	margin: 0;
+	padding: 0;
+	color: #000;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 100%;
+	line-height: 1.4;
+	background-color: #CADCA9;
+	background-image: url(background.jpg);
+	background-repeat: no-repeat;
+	height: 100%;
+	width: 100%;
+}
+
+/* ~~ Element/tag selectors ~~ */
+ul, ol, dl { /* Due to variations between browsers, it's best practices to zero padding and margin on lists. For consistency, you can either specify the amounts you want here, or on the list items (LI, DT, DD) they contain. Remember that what you do here will cascade to the .nav list unless you write a more specific selector. */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* removing the top margin gets around an issue where margins can escape from their containing div. The remaining bottom margin will hold it away from any elements that follow. */
+	padding-right: 15px;
+	padding-left: 15px; /* adding the padding to the sides of the elements within the divs, instead of the divs themselves, gets rid of any box model math. A nested div with side padding can also be used as an alternate method. */
+}
+a img { /* this selector removes the default blue border displayed in some browsers around an image when it is surrounded by a link */
+	border: none;
+}
+
+/* ~~ Styling for your site's links must remain in this order - including the group of selectors that create the hover effect. ~~ */
+a:link {
+	color: #03C;
+	text-decoration: underline; /* unless you style your links to look extremely unique, it's best to provide underlines for quick visual identification */
+}
+a:hover, a:active, a:focus { /* this group of selectors will give a keyboard navigator the same hover experience as the person using a mouse. */
+	text-decoration: none;
+}
+
+/* ~~ These are the columns for the layout. ~~ 
+
+1) Padding is only placed on the top and/or bottom of the divs. The elements within these divs have padding on their sides. This saves you from any "box model math". Keep in mind, if you add any side padding or border to the div itself, it will be added to the width you define to create the *total* width. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design. You may also choose to remove the padding on the element in the div and place a second div within it with no width and the padding necessary for your design.
+
+2) No margin has been given to the columns since they are all floated. If you must add margin, avoid placing it on the side you're floating toward (for example: a right margin on a div set to float right). Many times, padding can be used instead. For divs where this rule must be broken, you should add a "display:inline" declaration to the div's rule to tame a bug where some versions of Internet Explorer double the margin.
+
+3) Since classes can be used multiple times in a document (and an element can also have multiple classes applied), the columns have been assigned class names instead of IDs. For example, two sidebar divs could be stacked if necessary. These can very easily be changed to IDs if that's your preference, as long as you'll only be using them once per document.
+
+4) If you prefer your nav on the right instead of the left, simply float these columns the opposite direction (all right instead of all left) and they'll render in reverse order. There's no need to move the divs around in the HTML source.
+
+*/
+.sidebar1 {
+	float: left;
+	width: 170px;
+	color: #000;
+	background-color: #C0C7B7;
+	padding: 10px;
+	height: 500px;
+	position: relative;
+	padding-left: 10px;
+}
+
+/* ~~this fixed width container surrounds the other divs~~ */
+.container {
+	width: 960px;
+	background: #C0C7B7;
+	margin: 0 auto; /* the auto value on the sides, coupled with the width, centers the layout */
+}
+
+/* ~~ the header is not given a width. It will extend the full width of your layout. It contains an image placeholder that should be replaced with your own linked logo ~~ */
+.header {
+	background: #ADB96E;
+	width: 960px;
+}
+.content {
+	padding: 10px 0;
+	width: 770px;
+	float: left;
+	background-color: #FFF;
+}
+
+/* ~~ This grouped selector gives the lists in the .content area space ~~ */
+.content ul, .content ol { 
+	padding: 0 15px 15px 40px; /* this padding mirrors the right padding in the headings and paragraph rule above. Padding was placed on the bottom for space between other elements on the lists and on the left to create the indention. These may be adjusted as you wish. */
+}
+
+/* ~~ The navigation list styles (can be removed if you choose to use a premade flyout menu like Spry) ~~ */
+ul.nav {
+	list-style: none; /* this removes the list marker */
+	border-top: 1px solid #666; /* this creates the top border for the links - all others are placed using a bottom border on the LI */
+	margin-bottom: 15px; /* this creates the space between the navigation on the content below */
+}
+ul.nav li {
+	border-bottom: 1px solid #666; /* this creates the button separation */
+}
+ul.nav a, ul.nav a:visited { /* grouping these selectors makes sure that your links retain their button look even after being visited */
+	padding: 5px 5px 5px 15px;
+	display: block; /* this gives the link block properties causing it to fill the whole LI containing it. This causes the entire area to react to a mouse click. */
+	width: 160px;  /*this width makes the entire button clickable for IE6. If you don't need to support IE6, it can be removed. Calculate the proper width by subtracting the padding on this link from the width of your sidebar container. */
+	text-decoration: none;
+	background: #C6D580;
+}
+ul.nav a:hover, ul.nav a:active, ul.nav a:focus { /* this changes the background and text color for both mouse and keyboard navigators */
+	background: #ADB96E;
+	color: #FFF;
+}
+
+/* ~~ The footer ~~ */
+.footer {
+	padding: 10px 0;
+	position: relative;/* this gives IE6 hasLayout to properly clear */
+	clear: both; /* this clear property forces the .container to understand where the columns end and contain them */
+	background-color: #567D48;
+	color: #FFF;
+}
+
+/* ~~ miscellaneous float/clear classes ~~ */
+.fltrt {  /* this class can be used to float an element right in your page. The floated element must precede the element it should be next to on the page. */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* this class can be used to float an element left in your page. The floated element must precede the element it should be next to on the page. */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* this class can be placed on a <br /> or empty div as the final element following the last floated div (within the #container) if the #footer is removed or taken out of the #container */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+.Highlight {	font-family: "Comic Sans MS", cursive;
+	font-style: italic;
+	color: #333333;
+	font-size: 16px;
+	font-weight: normal;
+}
+.container .sidebar1 p a strong {
+	color: #000;
+	font-size: 120%;
+}
+-->
+</style>
+<script src="SpryAssets/SpryMenuBar.js" type="text/javascript"></script>
+<link href="SpryAssets/SpryMenuBarHorizontal.css" rel="stylesheet" type="text/css" />
+<!-- InstanceBeginEditable name="head" -->
+<!-- InstanceEndEditable -->
+</head>
+
+
+<body>
+<div class="container">
+  <div class="header"><a href="index.html"><img src="WODCoverFlow.jpg" alt="William O. Douglas Trail: Yakima to Mount Ranier" name="Insert_logo" width="960" height="275" border="5" id="Insert_logo" style="background: #C6D580; display:block; font-size: 10%;" /></a><!-- end .header --></div>
+  <ul id="MenuBar1" class="MenuBarHorizontal">
+    <li><a href="trail.html" title="Trail Info">Trail Info</a></li>
+    <li><a href="map.html" title="Map">Map</a></li>
+    <li>
+      <div align="center"><a href="naturalhistory.html" title="Natural History">Natural History</a></div>
+    </li>
+    <li>
+      <div align="center"><a href="#" class="MenuBarItemSubmenu">Heritage Hikes</a>
+        <ul>
+          <li><a href="selahgap.html" title="Selah Gap">Selah Gap</a></li>
+          <li><a href="wagonroad.html">Cowiche Valley Wagon Road</a></li>
+        </ul>
+      </div>
+    </li>
+    <li><a href="#" class="MenuBarItemSubmenu">Ecosystem Hikes</a>
+      <ul>
+<li><a href="divideridge.html" title="Divide Ridge">Divide Ridge</a></li>
+<li><a href="laughingwater.html" title="Laughingwater Trail">Laughingwater Creek</a></li>
+<li><a href="#" title="Fish Lake to Cascade Crest">Fish Lake to Cascade Crest</a></li>
+</ul>
+    </li>
+<li>
+      <div align="center"><a href="about.html" title="About WIlliam O. Douglas">About W.O.D.</a></div>
+    </li>
+  </ul>
+<div class="sidebar1">
+  <center><form action="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=E6DGHGBZFE9BY" method="post" target="_blank">
+<input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+<img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="2" height="1">
+</form></center>
+<p><font size="-1"><br>Mail Checks to:</br><br>4001 Summitview Ave, Suite 5-45 Yakima, WA 98908</br></font></p>
+  <p align="center"><strong>Featured Hikes</strong></p>
+<p align="center"><a href="rockytop.html">Rocky Top </a></p>
+    <p align="center"><strong>Featured Links</strong></p>
+    <p align="center"><a href="WTA_Article.pdf">WTA Article</a></p>
+    <p align="center"><a href="trailproposal.html">National Historic Trail Proposal</a></p>
+    <p align="center"><a href="rainier1881.PDF">Climbing Mt. Rainier in 1881</a></p>
+<p align="center"><strong>Contact Us</strong></p>
+    <p align="center"><a href="mailto:williamodouglastrail@gmail.com">Send us an Email</a></p>
+    <p align="center"><a href="https://www.facebook.com/pages/William-O-Douglas-Trail/392434207446818" target="_blank"><img src="Icons/findus-fb.jpeg" width="119" height="48" alt="William O. Douglas Trail: Find Us" /></a></p>
+    <p align="center">&nbsp;</p>
+  </div>
+  
+  <div class="content"><!-- InstanceBeginEditable name="content" -->
+    <h4 align="center">Laughingwater Creek Trail</h4>
+    <p align="center">&nbsp;</p>
+    <p><img width="175" height="944" src="Templates/WOD Test Template_clip_image001.png" align="left" hspace="9" alt="Description: Narrow horizontal" /><img src="Andy Photos/andy.jpg" width="195" height="236" align="left" hspace="9"/>Length: 16 miles (round trip)<br />
+      Beginning Elevation: 2,200 feet <br />
+      End Elevation: 4,954 feet<br />
+    Elevation Gain: 3,000 feet</p>
+    <p align="center"><br />
+</p>
+    <p>&nbsp;</p>
+    <p>&nbsp;</p>
+    <p>Trailhead:  On SR-123 in southeast Mt. Rainier National Park, go north from Ohanapecosh 1.7 miles or go south 0.2 mile from Stevens Canyon Road. The trailhead is on the east side of the highway (Waypoint 1). Parking here is very limited.  Find more parking 150 yards north on the highway at the Stevens Canyon Road turnoff.<br />
+    </p>
+<p>While this hike can be done as a long day hike, it is better suited to a backpack, camping at Three Lakes. This puts you in a good position to climb &ldquo;Peak 5,941,&rdquo; arguably the most spectacular viewpoint on the entire WOD Trail, in morning sun.  </p>
+    <p><br />
+    The Laughingwater Creek hike boasts three natural attractions that make this part of the Pacific Northwest a world-class destination for those who appreciate incredible natural values:  an impressive old growth forest along lower and middle elevations of the trail, verdant subalpine meadows in the higher elevations, and a stunning view of nearby Mt. Rainier, monarch of the Cascade Range. As a bonus, off in the distance are great views of other Cascade Range peaks including Mt. Adams, the Goat Rocks, and Mt. St. Helens. </p>
+<p><br />
+  Though old growth forest that once mantled much of the &ldquo;wetside&rdquo; of the Pacific Northwest may be described as monotonous, this characteristic can hardly be applied to the Laughingwater Creek Trail. Numerous openings in the forest break any semblance of a monoculture forest. Whether due to blow downs, aged trees toppling, disease or landslides, this forest displays impressive &ldquo;structural diversity.&rdquo;  Snags and decomposing logs are abundant and create openings where deciduous growth flourish, especially vine maple and a thriving shrub layer. This structural diversity is characterized by the presence of trees showing a variety of age and size classes, both living and dead, plus a diverse shrub, forb, and fungi and lichen component, all contribute to making this a textbook example of an old growth forest.</p>
+<p><br />
+  The Laughingwater Creek Trail climbs through four distinct forest zones: Western Hemlock, Silver Fir, Mountain Hemlock, and Subalpine Fir. Above continuous tree line near the Cascade crest, the trail traverses an impressive Alpine Parkland, a beautiful zone renowned for its stunning wildflower display. </p>
+<p><br /><img width="311" height="409" src="Andy Photos/western_hemlock_zone_279.jpg" align="left" hspace="9" />The initial mile of the trail climbs steadily in the Western Hemlock Zone through an even-aged forest of modest size, with western hemlock and Douglas-fir dominating. Scattered immature Pacific silver firs, their trunks ashen white and splotched, attest that this zone is too low and too dry for optimum development of this species here. Look for Pacific yews, a scraggly small tree with reddish, peeling bark. This forest is of modest size and appears even-aged, perhaps reflecting fairly recent fire history. For the first mile, the trail climbs a steep slope plagued by continuing instability and marked thus on geology maps as a landslide zone. Trail maintenance is challenging in this area. Tree growth reflects these landslides as numerous leaning or &ldquo;drunken&rdquo; trees seem poised to topple. Fallen trunks portend that these trees will fulfill this prediction, the only question is when. </p>
+    <p>A spectrum of communities arranged along moisture gradients are found along the climb through the Western Hemlock Zone. Early in the climb, the moist end of the scale is represented with sword fern and a dense carpet of mosses. At the dry end on ridges, a mile or so up the trail, common shrubs in the understory are those adapted to dry sites: Oregon grape, salal, and red huckleberry. Twinflower is common on most sites. Openings caused by disturbance have vine maple.      </p>
+<p align="center"><img src="Andy Photos/western_hemlock_zone_281.jpg" width="358" height="256" /></p>
+<p><br />
+  At about 3000 feet elevation, one passes a forest-lined pond off on the west side of the trail (Waypoint 2). <em>Spiraea</em> shrubs edge the wet zone and pretty yellow pond lilies dot the lake’s surface. Towering Douglas-fir and western hemlock form a backdrop, making for a quintessential Northwest scene.</p>
+<p><br />
+  Above 3000 feet elevation, the forest abruptly becomes old growth of the Western Hemlock Zone. Scattered giant Douglas-fir, with deeply furrowed bark, tower more than 200 feet above the trail. Large western hemlock are much more numerous, distinctive on account of their dark narrowly furrowed bark. The forest floor is often poorly vegetated. Vanilla leaf is one conspicuous groundcover plant. Trillium is scarcer but utterly distinctive. The extent and grandeur of this forest make it obvious why the Laughingwater Creek Trail is featured in Old-growth Forest Hikes: Washington and Oregon (J. and D. Cissel. Mountaineers. 2003).</p>
+<p><br />
+  Bird species diversity on this section of the trek is low. Listen for species partial to old growth forests such as Pileated Woodpecker, Brown Creeper, Pacific Wren, Golden-crowned Kinglet, Townsend’s Warbler, and Varied Thrush.</p>
+<p><br />
+  Above about 4000 feet elevation, the last of the giant Douglas-firs and a growing scarcity of western hemlocks mark the Silver Fir Zone. Silver fir, many of impressive height and girth, approach the size of the hemlocks in the forest below (Waypoint 3). Dense mature silver fir forests typically show little undergrowth and ground cover vegetation save for abundant trailing rubus, whose delicate white blooms dapple the forest floor in summer. </p>
+<p align="center"><img src="Andy Photos/silver_fir_270.jpg" width="326" height="371" /></p>
+<p><br />
+  Bark of mature Pacific silver firs is dark, in stark contrast to the whitish, splotched trunks of younger specimens. Look on mature silver firs for the &ldquo;snowline.&rdquo; Above about 15 feet above the ground on trunks in this forest, stringy lichens create a gray-green &ldquo;hairy&rdquo; appearance to the trunks. Below this level, lichens disappear, a rough indication of the mean maximum snow depth here, impressive indeed. As in the Western Hemlock Zone, disturbance is a frequent occurrence in the Silver Fir Zone. Dead and dying trees create openings. As there is more year-round water in this zone due to greater snowfall and tardiness of melt (late June typically), openings have a more diverse shrub and colorful forb cover. A number of seeps and small creeks are passed on the ascent where these features show nicely.</p>
+<p><br />
+  As in the Western Hemlock Zone, a number of communities on along the moisture gradient are encountered on this hike. Driest is silver fir with common beargrass in the understory. Next, Silver fir with a cover of Alaska huckleberry reflects slightly greater soil moisture through the growing season. Moister still one finds a more herb-rich community with purple twistedstalk and bunchberry dogwood as common representatives. Seeps or creek sides display a riot of green, with the formidable devilsclub being most conspicuous. </p>
+<p><br />
+  A number of areas of very wet seeps on steep side hills have very impressive Alaska-cedars, very distinctive on account of their stringy, ashen gray bark. The Silver Fir Zone continues up to Three Lakes. </p>
+<p><br />
+  About 5.5 miles up the trail, the trail reaches a minor pass and begins a slight descent into Three Lakes. A picturesque patrol cabin (Waypoint 4), sometimes staffed, is situated between the first and second of Three Lakes. The shores of Three Lakes, plus those of two more unnamed small lakes farther up along the trail are dominated by a sedge-dominated wetland zone. Back from this wetland is a strip of <em>Spiraea</em> or hardhack; back further are cold and snow adapted mountain hemlock, distinctive by their leaning tops and massive purplish-colored bark. A transition to the Mountain Hemlock Zone is occurring here, the Pacific Northwest’s snowiest tree zone. However, this zone is not as well represented or extensive as at wetter, snowier locations such as at Paradise on Mt. Rainier’s southwest slopes. Back from this strip on yet on yet higher ground is an upward continuation of the Silver Fir Zone.</p>
+<p><br />
+  <em>On the lakes,</em><em>look</em> for family groups of Barrow’s goldeneye, a diving duck that nests in tree holes by the water’s edge. Spotted sandpipers bob along the shores, calling their loud notes.  </p>
+<p><br />
+  Upward from Three Lakes towards the Cascade crest, the increasingly snowy and cold climate limits continuous forest cover typical of lower elevations along the trail. Tree cover diminishes with each bend in the trail. This end of continuous tree cover marks the beginning of the Alpine Parkland Zone, an ecosystem characterized by tree clumps alternating with treeless openings.  Ever-larger openings appear, grown to a dense shrub layer, especially of dwarf huckleberries, various heathers, and mountain ash interspersed with showy forbs. Sedges are abundant. A riot of colorful wildflowers in this zone make this a good example of why parkland is a famous destination for hikers and naturalists in the Pacific Northwest. Indeed, these meadows are the showiest in the world and an important reason millions of visitors head each year to Pacific Northwest parks such as Mt. Rainier, Olympic, and North Cascades. Common species contributing to this marvelous display include Sitka valerian, false hellebore, broadleaf lupine, showy sedge, smallflower paintbrush, avalanche fawnlily, western pasqueflower, American bistort, feathery miterwort, fireweed, and common cowparsnip.  </p>
+<p align="center"><img src="Andy Photos/alpine_parkland_218.jpg" width="450" height="349" /></p>
+<p><br />
+  The parkland is favored summer range for elk and mule deer. Deer are often retiring hereabouts but you will likely hear elk snorting or even bugling.</p>
+<p>About a mile uphill from Three Lakes, an east-west part of the trail reveals two forest zones in close proximity: Silver Fir to the south and Subalpine Fir to the north on a south-facing hillside (Waypoint 5). Around a bend in the trail, you will encounter Mountain Hemlock, then openings. Diversity is thus the hallmark of the 1.5 miles between Three Lakes and the Cascade crest.</p>
+<p><br />
+  Farther up, you see a bit off to the north an unnamed lake (Waypoint 6), the uppermost lake on the Laughingwater Creek Trail.</p>
+<p><br />
+  Lessons in subalpine ecology abound along this section uphill from the last lake. The pronounced effect of late snow lie on dwarfing of mountain hemlock is readily appreciated on many slopes (Waypoint 7). Closer to the crest, a transect of Alpine Parkland communities mantles the slope to the south (Waypoint 8): from red heather on the well-drained and rocky slope to wildflower-rich forbs in the small basin.</p>
+<p><br />
+  Traversing a steep rocky side slope, a good view of Mt. Rainier opens up. But, the best is yet to come. Soon, you intersect the Pacific Crest Trail (Waypoint 9). Go right (south) to the national park boundary at 5,700 feet elevation (Waypoint 10).  A short scramble north brings you to the highest and grandest view on the entire WOD Trail (Waypoint 11) at 5,941 feet elevation. For the average hiker, this peak is best accessed by first descending east down the Pacific Crest Trail a few hundred yards (Waypoint 12) and then proceeding north over the lupine-covered slopes. Dominating the panorama is mighty Mt. Rainier, seemingly close enough to touch. Views of this monarch of the Cascade Range are simply put, stupendous. Study the mountains glacier-mantled slopes, the greatest ice cover of any mountain in the United States south of Alaska. Views of the Goat Rocks, an old and thoroughly eroded Cascade volcano, and Mt. Adams, third highest peak in the range, are grand, too. Through gaps in the trees off to the southwest, look for Mt. St. Helens, until 1980 the most perfect cone in the Cascades, now missing 1.300 feet of its top.</p>
+<p align="center"><img src="Andy Photos/View_244.jpg" width="350" height="265" hspace="5"/><img src="Andy Photos/View_245.jpg" width="350" height="265" /></p>
+<p><br />
+  At your feet on this rocky eminence are wedded to dry sites, including common juniper, Cascade-crest desert parsley, and buckwheat.</p>
+<p><br />
+  Backpackers will find good campsites at Two Lakes. Where Laughingwater Creek Trail meets the Pacific Crest Trail (Waypoint 9), go north 0.15 mile then right on the Two Lakes Trail 0.75 mile to the lake. Beautiful Alpine Parkland is traversed en route to these lakes. Listen for hoary marmot, whose sharp whistle warns danger, whether it be a hiker or bird of prey overhead. </p>
+<p><img src="laughing_water_map.png" width="732" height="630" /></p>
+<br clear="all" />
+<p>LAUGHINGWATER TRAIL WAYPOINTS:<br />
+      1 - 46,45.102,-121,33.430,  2167&rsquo;                  TRAILHEAD<br />
+      2 - 46,45.341,-121,32.380,  3028&rsquo;                  &quot;LILY POND&quot;<br />
+      3 - 46,45.643,-121,30.467,  4024&rsquo;                  TOP OF WESTERN HEMLOCK ZONE<br />
+      4 - 46,45.783,-121,28.411,  4685&rsquo;                  THREE LAKES CABIN<br />
+      5 - 46,46.106,-121,27.427,  5259&rsquo;                  NORTH:SUBALPINE FIR. SOUTH: SILVER FIR<br />
+      6 - 46,46.072,-121,27.583,  5147&rsquo;                  UPPERMOST THREE LAKES<br />
+      7 - 46,46.182,-121,27.196,  5416&rsquo;                  LATE SNOW LIE-STUNTED CONIFERS<br />
+      8 - 46,46.233,-121,26.948,  5633&rsquo;                  WET FORBS TO DRY HEATHER TRANSECT<br />
+      9 - 46,46.304,-121,26.994,  5695&rsquo;                  PACIFIC CREST TRAIL<br />
+      10- 46,46.292,-121,26.862, 5773&rsquo;                  MT RAINIER NATIONAL PARK BOUNDARY<br />
+      11- 46,46.351,-121,26.853, 5888&rsquo;                  VIEWPOINT-PEAK 5941'<br />
+      12- 46,46.321,-121,26.769, 5696&rsquo;                  &quot;EASY ACCESS&quot; TO PEAK 5941'</p>
+<p align="center">&nbsp;</p>
+    <blockquote>
+  <p>&nbsp;</p>
+  </blockquote>
+  <!-- InstanceEndEditable --></div>
+<div class="footer">
+    <p>Copyright © 2006-2013 William O. Douglas Trail Foundation. All Rights Reserved.</p>
+  <!-- end .footer --></div>
+  <!-- end .container --></div>
+<script type="text/javascript">
+var MenuBar1 = new Spry.Widget.MenuBar("MenuBar1", {imgDown:"SpryAssets/SpryMenuBarDownHover.gif", imgRight:"SpryAssets/SpryMenuBarRightHover.gif"});
+</script>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-46661399-1', 'williamodouglastrail.org');
+  ga('send', 'pageview');
+
+</script>
+</body>
+<!-- InstanceEnd --></html>
